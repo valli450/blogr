@@ -1,0 +1,790 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+:root{
+    --light-red: hsl(356, 100%, 66%); /* CTA text */
+    --very-light-red: hsl(355, 100%, 74%); /* CTA hover background */
+    --very-dark-blue: hsl(208, 49%, 24%); /* headings */
+    --white: hsl(0, 0%, 100%); /* text */
+    --grayish-blue: hsl(240, 2%, 79%); /* footer text */
+    --very-dark-grayish-blue: hsl(207, 13%, 34%); /* body copy */
+    --very-dark-black-blue: hsl(240, 10%, 16%); /* footer background */
+
+    /* Background gradient - Intro/CTA mobile nav: */
+    --very-light-red: hsl(13, 100%, 72%);
+    --light-red: hsl(353, 100%, 62%);
+
+    /*Background gradient - body:*/
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+/* Style */
+body{
+    font-size: 16px;
+}
+
+.whale-section{
+    width: 100%;
+}
+
+.head{
+    width: 100%;
+    background: 
+        url(./images/bg-pattern-intro-mobile.svg),
+        linear-gradient(to bottom, var(--very-light-red), var(--light-red));
+    background-position:  -380px -240px, 100%;
+    height: 38rem;
+    border-bottom-left-radius: 120px;
+}
+
+.head__line{
+    padding: 4rem 2rem 5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burder__button{
+    background-color: var(--very-light-red);
+    border: none;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.burger__close{
+    display: none;
+}
+
+.active{
+    display: block;
+    background-color: var(--very-light-red);
+    border: none;
+    cursor: pointer;
+}
+
+
+.menu{
+    display: none;
+}
+
+.show{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--white);
+    top: 9rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 84%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.turn p{
+    color: var(--very-dark-grayish-blue);
+}
+
+.turn img{
+    transform: rotate(180deg);
+}
+
+.menu__about{
+    padding-top: 1rem;
+}
+
+.menu_link{
+    display: none;
+}
+
+.menu__link-header{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.menu__link-header p{
+    font-family: 'Ubuntu';
+    font-weight: 500; 
+    font-size: 18px;
+    color: var(--very-dark-blue);
+}
+
+#connect__button .open{
+    margin-bottom: 1.5rem;
+}
+
+.open {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--grayish-blue);
+    width: 18rem;
+    padding: 1.5rem 0 1.5rem  0;
+    border-radius: 5px;
+}
+
+.open a{
+    text-decoration: none;
+    color: var(--very-dark-grayish-blue);
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.menu__line{
+    border: 0.5px solid var(--grayish-blue);
+    width: 18rem;
+}
+
+.menu__bottom{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu__login p{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu__sign-up{
+    background: linear-gradient( to right, var(--very-light-red), var(--light-red));
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.menu__sign-up p{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--white);cursor: pointer;
+}
+
+.head__text{
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.head__text h1{
+    color: var(--white);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.head__text p{
+    color: var(--grayish-blue);
+    font-family: 'Overpass', sans-serif;
+    font-size: 16px;
+}
+
+.head__subscription{
+    padding: 4rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.head__subscription button{
+    height: 3rem;
+    width: 8rem; 
+    border-radius: 30px;
+    border: 1px solid var(--white);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.3rem;
+}
+
+#start{
+    background-color: var(--white);
+    color: var(--very-dark-blue);
+    cursor: pointer;
+}
+
+#learn{
+    background-color: transparent;;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.content{
+    text-align: center;
+}
+
+.future__head{
+    margin: 5rem 0 3rem 0;
+    text-align: center;
+}
+
+.future__head h2{
+    font-family: 'Overpass', sans-serif;
+    font-size: 27px;
+    color: var(--very-dark-blue);
+}
+
+.editor__desktop{
+    display: none;
+}
+
+.editor__text{
+    margin: 3.5rem 2rem 1rem 2rem;
+}
+
+.editor__content{
+    padding-bottom: 3rem;
+}
+
+.editor__content h3{ 
+    padding-bottom: 1rem;
+    color: var(--very-dark-blue);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.editor__content p{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    color: var(--very-dark-grayish-blue);
+    font-size: 18px;
+    line-height:1.8rem;
+}
+
+.content__mobile{
+    width: 100%;
+    margin-top: 15rem;
+    background: 
+        url(./images/bg-pattern-circles.svg),
+        linear-gradient(to right bottom, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+    background-repeat: no-repeat;
+    background-size: 40rem, 100%;
+    background-position: -120px -240px, 100%;
+    border-top-right-radius: 120px;
+    border-bottom-left-radius: 120px;
+    height: 43rem;
+}
+
+.mobile__image{
+    position: relative;
+    top: -11.7rem;
+}
+
+
+.mobile__image img{
+    width: 24rem;
+}
+
+.mobile__text{
+    margin-top: -9.8rem;
+}
+
+.mobile__text h2{
+    color: var(--white);
+    font-family: 'Overpass', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.mobile__text p{
+    padding: 1.6rem 2rem 1.5rem 2rem;
+    color: var(--grayish-blue);
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px;
+    line-height: 1.9rem;
+}
+
+.desktop{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.mobile-desktop img{
+    width: 25rem;
+}   
+
+.desktop_big{
+    display: none;
+}
+
+.destop__text{
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+
+.desktop__body h3{
+    color: var(--very-dark-blue);
+    font-family: 'Overpass';
+    font-size: 30px;
+}
+
+.desktop__body p{
+    padding-top: 2rem;
+    color: var(--very-dark-grayish-blue);
+    line-height: 1.9rem;
+    font-size: 18px;
+    font-family: 'Overpass';
+}
+
+.powerful{
+    margin-top: 3rem;
+}
+
+.powerful h3{
+    padding-top: -1rem;
+}
+
+.bottom{
+    background-color: var(--very-dark-black-blue);
+    text-align: center;
+    border-top-right-radius: 120px;
+    padding-bottom: 2.2rem;
+}
+
+.bottom__logo{
+    padding: 5rem 2rem 2rem 2rem;
+}
+
+.bottom__link h4{
+    color: var(--white);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    padding: 1.8rem;
+}
+
+.bottom__link p{
+    padding: 0.3rem;
+    color: var(--grayish-blue);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 19px;
+}
+
+@media (min-width: 480px) {
+    .editor__image{
+        height: 26rem;
+    }
+
+    .content__mobile{
+        background-position:  -80px -210px, 100%;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    .show{
+        width: 90%;
+    }
+
+    .editor__image{
+        height: 32rem;
+    }
+
+    .mobile__image{
+        top: -14.5rem;
+    }
+    .mobile__image img{
+        width: 30rem;
+    }
+
+    .content__mobile{
+        background-position:  -20px -240px, 100%;
+    }
+
+    .desktop__image{
+        background-size: 42rem;
+        height: 32rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .burder__button{
+        display: none;
+    }
+
+    .mobile__arrow{
+        display: none;
+    }
+
+    .head{
+        background: 
+            url(./images/bg-pattern-intro-desktop.svg),
+            linear-gradient(to right, var(--very-light-red), var(--light-red));
+        background-size: 260%, 100%;
+        background-position: -600px -800px, 0;
+        height: 23rem;
+    }
+    
+    .head__line{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 3rem 2rem 3rem;
+        align-items: center;    
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .menu{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;      
+        margin-right: -4rem;
+        width: 46rem;
+    }
+
+    .menu__about{
+        display: flex;
+        flex-direction: row;
+        width: 18rem;
+        justify-content: space-around;
+        padding: 0;
+
+    }
+
+    .menu_link{
+        display: none;
+    }
+    
+    .menu__line{
+        display: none;
+    }
+
+    .desctop__arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu__bottom{
+        display: flex;
+        flex-direction: row;        
+        width: 8rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .menu__link-header p{
+        font-family: 'Ubuntu';
+        font-weight: 500; 
+        font-size: 14px;
+        color: var(--grayish-blue);
+    }
+    
+    #connect__button .open{
+        margin-bottom: 0;
+    }
+
+
+    .open {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        position: fixed;
+        background-color: var(--white);
+        align-items: center;
+        justify-content: center;
+        width: 8rem;
+        gap: 0.5rem;
+        padding: 0.5rem
+    }
+
+
+    .open a{
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .open a:hover{
+        font-weight: 700;
+    }
+
+    .menu__login p{
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--grayish-blue);
+    }
+
+    .menu__sign-up{
+        background: var(--white);
+        width: 7rem;
+        height: 1.8rem;
+    }
+
+    .menu__sign-up p{
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--light-red);
+        cursor: pointer;
+    }
+
+
+    .head__text{
+        padding: 0;
+        gap: 0.7rem;
+    }
+
+    .head__text h1{
+        font-weight: 300;
+    }
+
+    .head__text p{
+        color: var(--grayish-blue);
+        font-family: 'Overpass', sans-serif;
+        font-size: 14px;
+    }
+
+    .head__subscription{
+        padding: 1.5rem;
+    }
+
+    .head__subscription button{
+        height: 2rem;
+        width: 6rem; 
+        font-size: 12px;
+    }
+
+    #start{
+        color: var(--light-red);
+    }
+
+    .future__head{
+        margin-top: 6rem;
+    }
+
+    .editor{
+        display: flex;
+        flex-direction: row;
+        gap: 0.1rem;
+    }
+
+
+    .mobile__editor{
+        display: none;
+    }
+
+    .editor__desktop{
+        display: block;
+        order: 0;
+        overflow: hidden;
+        width: 20rem;
+        margin-top: 9rem;
+    }
+
+    .editor__desktop img{
+        width: 28rem;
+    }
+
+    .editor__text{
+        order: -1;
+        text-align: left;
+    }
+
+    .content__mobile{
+        display: flex;
+        height: 22rem;
+    }
+
+    .mobile__image{
+        top: -3rem;
+        left: 2rem;
+    }
+
+
+    .mobile__image img{
+        width: 24rem;
+    }
+
+    .mobile__text{
+        padding: 1rem;
+        margin-top: 1rem;
+        text-align: left;
+    }
+
+    .mobile__text p{
+        padding: 0.8rem 0 0 0;
+        font-family: 'Overpass', sans-serif;
+    }
+
+    
+
+    .desktop{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .mobile-desktop{
+        display: none;
+    }
+
+    .desktop_big{
+        display: block;
+        margin:  4rem 0 4rem -7rem;
+    }
+
+    .desktop_big img{
+        width: 24rem;
+    }
+
+
+    .desktop__image{
+        width: 22rem;
+    }
+
+    .powerful{
+        margin-bottom: 2rem;
+    }
+
+
+    .bottom{
+        background-color: var(--very-dark-black-blue);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 2rem 3rem 2rem;
+        text-align: left;
+        align-self: start;
+    }
+
+    .bottom__logo{
+        padding: 0;
+    }
+    
+    .bottom__link h4{
+        padding: 0.3rem 0 2rem 0.3rem;
+    }
+
+    .bottom__link p{
+        padding: 0.5rem 0 0.5rem 0;
+    }
+}
+
+@media (min-width: 920px) {
+    .editor__desktop{
+        width: 32em;
+        gap: 1rem;
+    }
+
+    .editor__desktop img{
+        width: 36rem;
+        margin-right: -17rem; 
+    }
+
+    .mobile__image img{
+        width: 24rem;
+    }
+
+    .editor__text{
+        padding-left: 4rem;
+    }
+
+    .desktop_big img{
+        width: 32rem;
+    }
+
+    .destop__text{
+        text-align: left;
+        padding-right: 5rem;
+    }
+
+    .desktop__image{
+        width: 20rem;
+    }
+
+    .desktop_big{
+        margin-left: -10rem;
+    }
+
+    
+    .bottom__link h4{
+        padding: 0.3rem 0 3rem 0.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .editor__desktop{
+        width: 33em;
+        gap: 3rem;
+        margin-top: -7rem;
+    }
+
+    .editor__desktop img{
+        width: 47rem;
+        margin-right: -10rem; 
+    }
+
+    .mobile__image img{
+        height: 30rem;
+    }
+
+    .mobile__text{
+        padding: 4rem 9rem 5rem 7rem;
+    }
+
+    .mobile__image img{
+        width: 24rem;
+    }
+
+
+    .desktop_big img{
+        width: 50rem;
+    }
+
+    .desktop{
+        margin: 8rem 6rem 8rem 0;
+    }
+
+
+    .desktop__image{
+        margin-top: -5.5rem;
+        width: 35rem;
+    }
+
+    .desktop_big{
+        margin-left: -14rem;
+    }
+
+    
+    .bottom__link h4{
+        padding: 0.3rem 0 3rem 0.3rem;
+    }
+}
+
+/* Frontmentor block */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
